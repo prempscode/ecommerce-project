@@ -4,6 +4,11 @@ import Header from "/src/components/Header";
 const HomePage = () => {
   return (
     <>
+      <link
+        rel="icon"
+        type="image/png"
+        href="/images/mobile-logo.png"
+      />
       <title>Ecommerce Project</title>
       <Header></Header>
       <div className="home-page">

@@ -3,6 +3,7 @@ import Header from "/src/components/Header";
 const Tracking = () => {
   return (
     <>
+      <link rel="icon" type="image/png" href="/images/tracking-icon.png" />
       <Header></Header>
 
       <div className="tracking-page">

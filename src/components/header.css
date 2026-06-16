@@ -1,6 +1,6 @@
 .header {
-  background-color: rgb(8, 79, 45);
-  color: white;
+  background-color: #2563eb;
+  color:#e0e7ff;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -28,14 +28,15 @@
 .header .header-link {
   display: inline-block;
   padding: 6px 9.5px;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: none;
+  transition: all 0.2s;
 }
 
 .header .header-link:hover {
-  border: 1px solid white;
+  background-color: #527fe19d;
 }
 
 .header .logo {
@@ -81,7 +82,7 @@
 }
 
 .header .search-button {
-  background-color: rgb(186, 255, 190);
+  background-color: #e0e7ff;
   border: none;
   width: 45px;
   height: 40px;
@@ -104,7 +105,7 @@
 }
 
 .header .orders-link {
-  color: white;
+  color: #e0e7ff;
 
   display: flex;
   align-items: center;
@@ -119,7 +120,7 @@
 }
 
 .header .cart-link {
-  color: white;
+  color: #e0e7ff;
   display: flex;
   align-items: center;
   position: relative;
@@ -136,7 +137,7 @@
 }
 
 .header .cart-quantity {
-  color: rgb(8, 79, 45);
+  color: #2563eb;
   font-size: 14px;
   font-weight: 700;
 
@@ -146,4 +147,7 @@
 
   width: 26px;
   text-align: center;
+}
+.orders-link.active{
+  text-decoration: underline;
 }

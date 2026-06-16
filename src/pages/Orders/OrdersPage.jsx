@@ -3,6 +3,7 @@ import Header from "/src/components/Header";
 const OrdersPage = () => {
   return (
     <>
+      <link rel="icon" type="image/png" href="/images/orders-favicon.png" />
       <Header></Header>
       <div className="orders-page">
         <div className="page-title">Your Orders</div>

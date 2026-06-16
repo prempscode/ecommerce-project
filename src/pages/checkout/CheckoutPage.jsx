@@ -1,16 +1,23 @@
 import CheckoutHeader from "../../components/Checkout/CheckoutHeader";
-import './CheckoutPage.css'
+import "./CheckoutPage.css";
 const CheckoutPage = () => {
   return (
     <>
+      <link rel="icon" type="image/png" href="/images/cart-favicon.png" />
       <CheckoutHeader></CheckoutHeader>
       <title> Checkout</title>
       <div className="checkout-header">
         <div className="header-content">
           <div className="checkout-header-left-section">
             <a href="/">
-              <img className="logo" src="images/logo.png" />
-              <img className="mobile-logo" src="images/mobile-logo.png" />
+              <img
+                className="logo"
+                src="images/white-silkroadmaster-logo.png"
+              />
+              <img
+                className="mobile-logo"
+                src="images/white-silkroadmaster-logo.png"
+              />
             </a>
           </div>
 
