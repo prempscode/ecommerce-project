@@ -6,7 +6,7 @@ const CheckoutHeader = () => {
       <div class="checkout-header">
         <div class="header-content">
           <div class="checkout-header-left-section">
-            <Link href="index.html">
+            <Link to="index.html">
               <img class="logo" src="images/logo.png" />
               <img class="mobile-logo" src="images/mobile-logo.png" />
             </Link>
@@ -14,7 +14,7 @@ const CheckoutHeader = () => {
 
           <div class="checkout-header-middle-section">
             Checkout (
-            <Link class="return-to-home-link" href="index.html">
+            <Link class="return-to-home-link" to="index.html">
               3 items
             </Link>
             )

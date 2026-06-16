@@ -1,4 +1,4 @@
-import CheckoutHeader from "../components/CheckoutHeader";
+import CheckoutHeader from "../../components/Checkout/CheckoutHeader";
 import './CheckoutPage.css'
 const CheckoutPage = () => {
   return (
