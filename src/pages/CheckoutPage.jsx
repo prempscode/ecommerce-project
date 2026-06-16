@@ -1,5 +1,5 @@
 import './checkout-header.css';
-import './Checkout.css';
+import './CheckoutPage.css';
 
 const CheckoutPage = () => {
   return (
