@@ -7,7 +7,7 @@ const HomePage = () => {
       <link
         rel="icon"
         type="image/png"
-        href="/images/mobile-logo.png"
+        href="/images/title-silkroadmaster-logo.png"
       />
       <title>Ecommerce Project</title>
       <Header></Header>
