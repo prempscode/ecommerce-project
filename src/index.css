@@ -5,7 +5,7 @@ body {
      on all sides. This removes the default margins. */
   margin: 0;
 }
-
+ 
 /* Remove the default margins of <p> elements. */
 p {
   margin: 0;
