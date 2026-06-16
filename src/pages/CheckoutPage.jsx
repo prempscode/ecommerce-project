@@ -1,10 +1,10 @@
-import './checkout-header.css';
-import './CheckoutPage.css';
-
+import CheckoutHeader from "../components/CheckoutHeader";
+import './CheckoutPage.css'
 const CheckoutPage = () => {
   return (
     <>
-    <title> Checkout</title>
+      <CheckoutHeader></CheckoutHeader>
+      <title> Checkout</title>
       <div className="checkout-header">
         <div className="header-content">
           <div className="checkout-header-left-section">
