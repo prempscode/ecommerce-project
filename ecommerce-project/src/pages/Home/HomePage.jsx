@@ -1,8 +1,13 @@
+import axios  from 'axios'
 import "./HomePage.css";
 import Header from "/src/components/Header";
 import { products } from "/start/data/products.js";
 
 const HomePage = () => {
+  axios.get("http://localhost:3000/api/products")
+  .then((response)=>{
+      response.data
+  })
   return (
     <>
       <link
@@ -15,7 +20,7 @@ const HomePage = () => {
         <div className="products-grid">
           {products.map((product) => {
             return (
-              <div key={product.key} className="product-container">
+              <div key={product.id} className="product-container">
                 <div className="product-image-container">
                   <img className="product-image" src={product.image} />
                 </div>
