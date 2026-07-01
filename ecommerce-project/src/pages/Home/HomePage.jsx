@@ -2,8 +2,8 @@ import axios  from 'axios'
 import "./HomePage.css";
 import Header from "/src/components/Header";
 import { useEffect,useState } from 'react';
-
-const HomePage = (cart) => {
+import { formatMoney } from '../../utils/money';
+const HomePage = ({cart}) => {
 const [products, setProducts] = useState([]);
 
 
@@ -23,7 +23,7 @@ const [products, setProducts] = useState([]);
       <link
         rel="icon"
         type="image/png"
-        href="/images/title-silkroadmaster-logo.png"
+        href="../../../public/images/title-silkroadmaster-logo.png"
       />
       <Header cart ={cart} />
       <div className="home-page">
@@ -51,7 +51,7 @@ const [products, setProducts] = useState([]);
                 </div>
 
                 <div className="product-price">
-                  ${(product.priceCents / 100).toFixed(2)}
+                {formatMoney(product.priceCents)}
                 </div>
 
                 <div className="product-quantity-container">
