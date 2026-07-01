@@ -3,20 +3,15 @@ import "./HomePage.css";
 import Header from "/src/components/Header";
 import { useEffect,useState } from 'react';
 
-const HomePage = () => {
+const HomePage = (cart) => {
 const [products, setProducts] = useState([]);
-const [cart, setCart] = useState([])
+
 
   useEffect(() => {
      axios.get("/api/products")
   .then((response)=>{
       setProducts(response.data)
   });
-
-  axios.get('/api/cart-item')
-  .then((response)=>{
-    setCart(response.data)
-  })
   }, [])
 
   // [] Dependency array let us run the functionality inside it, using an empty array runs the functionality
