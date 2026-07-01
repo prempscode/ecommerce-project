@@ -1,13 +1,21 @@
 import axios  from 'axios'
 import "./HomePage.css";
 import Header from "/src/components/Header";
-import { products } from "/start/data/products.js";
+import { useEffect,useState } from 'react';
 
 const HomePage = () => {
-  axios.get("http://localhost:3000/api/products")
+const [products, setProducts] = useState([]);
+  useEffect(() => {
+     axios.get("http://localhost:3000/api/products")
   .then((response)=>{
-      response.data
+      setProducts(response.data)
   })
+  }, [])
+
+  // Dependency array let us run the functionality inside it, using an empty array runs the functionality
+  // once.
+
+ 
   return (
     <>
       <link
