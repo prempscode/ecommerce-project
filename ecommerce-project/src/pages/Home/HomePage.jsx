@@ -5,14 +5,21 @@ import { useEffect,useState } from 'react';
 
 const HomePage = () => {
 const [products, setProducts] = useState([]);
+const [cart, setCart] = useState([])
+
   useEffect(() => {
-     axios.get("http://localhost:3000/api/products")
+     axios.get("/api/products")
   .then((response)=>{
       setProducts(response.data)
+  });
+
+  axios.get('/api/cart-item')
+  .then((response)=>{
+    setCart(response.data)
   })
   }, [])
 
-  // Dependency array let us run the functionality inside it, using an empty array runs the functionality
+  // [] Dependency array let us run the functionality inside it, using an empty array runs the functionality
   // once.
 
  
@@ -23,7 +30,7 @@ const [products, setProducts] = useState([]);
         type="image/png"
         href="/images/title-silkroadmaster-logo.png"
       />
-      <Header></Header>
+      <Header cart ={cart} />
       <div className="home-page">
         <div className="products-grid">
           {products.map((product) => {
