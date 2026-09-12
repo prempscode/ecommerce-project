@@ -1,6 +1,6 @@
 .header {
   background-color: #2563eb;
-  color:#e0e7ff;
+  color: #e0e7ff;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -148,6 +148,6 @@
   width: 26px;
   text-align: center;
 }
-.orders-link.active{
+.orders-link.active {
   text-decoration: underline;
 }
