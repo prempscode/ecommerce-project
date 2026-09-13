@@ -1,92 +1,91 @@
-import axios  from 'axios'
-import "./HomePage.css";
-import Header from "/src/components/Header";
-import { useEffect,useState } from 'react';
-import { formatMoney } from '../../utils/money';
-const HomePage = ({cart}) => {
-const [products, setProducts] = useState([]);
-
+import axios from 'axios'
+import './HomePage.css'
+import Header from '/src/components/Header'
+import { useEffect, useState } from 'react'
+import { formatMoney } from '../../utils/money'
+const HomePage = ({ cart }) => {
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
-     axios.get("/api/products")
-  .then((response)=>{
+    axios.get('/api/products').then(response => {
       setProducts(response.data)
-  });
+    })
   }, [])
 
   // [] Dependency array let us run the functionality inside it, using an empty array runs the functionality
   // once.
 
- 
   return (
     <>
       <link
-        rel="icon"
-        type="image/png"
-        href="../../../public/images/title-silkroadmaster-logo.png"
+        rel='icon'
+        type='image/png'
+        href='../../../public/images/title-silkroadmaster-logo.png'
       />
-      <Header cart ={cart} />
-      <div className="home-page">
-        <div className="products-grid">
-          {products.map((product) => {
+      <Header cart={cart} />
+      <div className='home-page'>
+        <div className='products-grid'>
+          {products.map(product => {
             return (
-              <div key={product.id} className="product-container">
-                <div className="product-image-container">
-                  <img className="product-image" src={product.image} />
+              <div key={product.id} className='product-container'>
+                <div className='product-image-container'>
+                  <img className='product-image' src={product.image} />
                 </div>
 
-                <div className="product-name limit-text-to-2-lines">
+                <div className='product-name limit-text-to-2-lines'>
                   {product.name}
                 </div>
 
-                <div className="product-rating-container">
+                <div className='product-rating-container'>
                   <img
-                    className="product-rating-stars"
+                    className='product-rating-stars'
                     // src="images/ratings/rating-45.png"
-                    src={`images/ratings/rating-${product.rating.stars * 10}.png`}
+                    src={`images/ratings/rating-${
+                      product.rating.stars * 10
+                    }.png`}
                   />
-                  <div className="product-rating-count link-primary">
+                  <div className='product-rating-count link-primary'>
                     {product.rating.count}
                   </div>
                 </div>
 
-                <div className="product-price">
-                {formatMoney(product.priceCents)}
+                <div className='product-price'>
+                  {formatMoney(product.priceCents)}
                 </div>
 
-                <div className="product-quantity-container">
+                <div className='product-quantity-container'>
                   <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
                   </select>
                 </div>
 
-                <div className="product-spacer"></div>
+                <div className='product-spacer'></div>
 
-                <div className="added-to-cart">
-                  <img src="images/icons/checkmark.png" />
+                <div className='added-to-cart'>
+                  <img src='images/icons/checkmark.png' />
                   Added
                 </div>
 
-                <button className="add-to-cart-button button-primary">
+                <button className='add-to-cart-button button-primary'>
                   Add to Cart
                 </button>
               </div>
-            );
+            )
           })}
           ;
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage
