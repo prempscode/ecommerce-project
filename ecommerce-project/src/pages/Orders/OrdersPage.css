@@ -163,7 +163,6 @@
   }
 
   .orders-page .product-actions {
-
     grid-column: 2;
     margin-bottom: 30px;
   }
@@ -198,7 +197,6 @@
   }
 
   .orders-page .product-actions {
-
     grid-column: auto;
     margin-bottom: 70px;
   }
